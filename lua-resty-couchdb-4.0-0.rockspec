@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lua-resty-couchdb"
-version = "3.1-2"
+version = "4.0-0"
 -- LuaDist source
 source = {
-  tag = "3.1-2",
+  tag = "4.0-0",
   url = "git://github.com/LuaDist-testing/lua-resty-couchdb.git"
 }
 -- Original source
 -- source = {
 --    url = "git://github.com/paragasu/lua-resty-couchdb",
---    tag = "v3.1-2"
+--    tag = "v4.0-0"
 -- }
 description = {
    summary  = "Minimalist couchdb client for lua resty",
