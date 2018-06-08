@@ -1,26 +1,23 @@
-#lua-resty-couchdb
-Lua resty minimal couchdb client using nginx proxy ngx.location_capture
+#lua-resty-couchdb 
 
-#Installation
+Lua resty minimal couchdb client
+
+#Installation 
 ```
 #luarocks install lua-resty-couchdb
 ```
 
-#Usage
-On nginx config
-```
-location /_users {
-  # base64 of "username:password"
-  proxy_set_header Authorization "Basic dGVzdHN0cmluZw==";
-  proxy_pass https://localhost:5984;
-}
-```
-
-on lua file
+#Usage 
 ```
 local couch   = require 'resty.couchdb'
-local couchdb = couch:new('_users')
-local res = couchdb:put(id, data)
+local config  = {
+  host = 'https://localhost:5984',
+  user = 'couchdb-user',
+  password = 'couchdb-pass'
+}
+local couch   = couch:new(config)
+local user = couch:db('_users')
+local res  = user:put(id, data)
 
 ```
 

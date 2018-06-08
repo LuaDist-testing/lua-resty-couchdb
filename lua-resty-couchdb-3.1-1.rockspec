@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lua-resty-couchdb"
-version = "2.1-1"
+version = "3.1-1"
 -- LuaDist source
 source = {
-  tag = "2.1-1",
+  tag = "3.1-1",
   url = "git://github.com/LuaDist-testing/lua-resty-couchdb.git"
 }
 -- Original source
 -- source = {
 --    url = "git://github.com/paragasu/lua-resty-couchdb",
---    tag = "v2.1-1"
+--    tag = "v3.1-1"
 -- }
 description = {
    summary  = "Minimalist couchdb client for lua resty",
@@ -19,7 +19,9 @@ description = {
    maintainer = "Jeffry L. <paragasu@gmail.com>"
 }
 dependencies = {
-   "lua >= 5.1"
+   "lua >= 5.1",
+   "lua-cjson",
+   "lua-resty-http"
 }
 build = {
    type = "builtin",
