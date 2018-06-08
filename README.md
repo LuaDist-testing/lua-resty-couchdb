@@ -18,7 +18,7 @@ location /_users {
 
 on lua file
 ```
-local couch   = require 'resty-couchdb'
+local couch   = require 'resty.couchdb'
 local couchdb = couch:new('_users')
 local res = couchdb:put(id, data)
 
@@ -66,6 +66,10 @@ Query rows of data using views
 - view_name *(string)* couchdb view name
 - opts *(table)* options parameter as [documented here](http://docs.couchdb.org/en/1.6.1/api/ddoc/views.html)
 
+
+### create_db(database_name)
+Create new database name
+- database_name *(string)* database name 
 
 
 ## Reference
